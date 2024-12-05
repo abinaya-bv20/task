@@ -1,38 +1,146 @@
-.App {
-  text-align: center;
+/* General Styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* App Container */
+.app-container {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #075e54;
+  color: white;
+  padding: 10px 20px;
+}
+
+.waba-info {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin: 0;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.waba-info p {
+  margin: 0;
+  white-space: nowrap; /* Prevents text wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adds ellipsis for overflowed text */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.whatsapp-logo {
+  width: 30px; /* Adjust size as needed */
+  height: auto;
+  margin-right: 10px; /* Space between logo and text */
+}
+
+.search-bar {
+  flex-grow: 1;
+  margin-left: 20px;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+/* Contact List */
+.contact-list {
+  width: 25%;
+  background-color: #fff;
+  border-right: 1px solid #ccc;
+  overflow-y: auto;
+}
+
+.contact-item {
+  padding: 15px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+}
+
+.contact-item:hover {
+  background-color: #f9f9f9;
+}
+
+.contact-item .date {
+  float: right;
+  font-size: 12px;
+  color: #999;
+}
+
+/* Chat Panel */
+.chat-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #e5ddd5;
+}
+
+.chat-header {
+  background-color: #075e54;
+  color: white;
+  padding: 10px 15px;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 10px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.message .timestamp {
+  font-size: 12px;
+  color: #999;
+  position: absolute;
+  bottom: -18px;
+  right: 10px;
+}
+
+/* Message Input */
+.message-input {
+  display: flex;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.message-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.message-input button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #075e54;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.message-input button:hover {
+  background-color: #064c44;
 }
